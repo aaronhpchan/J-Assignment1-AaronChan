@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #ffc1cc;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 300% !important;
+    text-shadow: 2.5px 3.5px #fffafa;
+}
+
+.navbar-brand, .page-title {
+    font-weight: 700;
+}
+
+.nav-item {
+    font-weight: 600;
+    font-size: 125%;
+}
+
+img {
+    border-radius: 15%;
+    border: 2px ridge #354230;
+    border-right: 3px groove #555555;
+    border-bottom: 3px groove #555555;
+    box-shadow: 1.5px 3.5px #3b3c36;
+    width: 100%;
+}
+
+h2.pt-5 {
+    font-weight: 600;
+}
+
+
+
