@@ -1,47 +1,95 @@
 extends layout
 
 block layout-content
-  div.container-md
-    h1.page-title.pt-5 MENU
-    h2.pt-5 DONUTS 
+  div.container-md.mb-5
+    h1.page-title.display-3.pt-5.pb-4 Menu
+    h2.display-5.pt-5 Donuts 
     div.row.pt-4
-        div.col-md-6
-          img(src="/images/strawberry-donut.jpg") 
-          <!-- photo by dinar_aulia from https://pixabay.com/photos/donut-food-dessert-snack-pastry-5620012/ -->
-        div.col-md-6.mt-4
-          div.fs-4.border-bottom.border-dark.border-2 Strawberry Shortcake
-          div.fs-4.border-bottom.border-dark.border-2 Lemon Lavender
-          div.fs-4.border-bottom.border-dark.border-2 Double Chocolate Caramel
-          div.fs-4.border-bottom.border-dark.border-2 Cookies n' Cream
-          div.fs-4.border-bottom.border-dark.border-2 Red Velvet
-          div.fs-4.border-bottom.border-dark.border-2 Oreo Cheesecake
-          div.fs-4.border-bottom.border-dark.border-2 Boston Cream
-          div.fs-4.border-bottom.border-dark.border-2 Chocolate Peanut Butter
-    h2.pt-5 BAGELS 
-    div.row.pt-4 
-      div.col-md-6.pb-4.pt-md-4
-        div.fs-4.border-bottom.border-dark.border-2 Smoked Salmon Bagel with Cream Cheese
-        div.fs-4.border-bottom.border-dark.border-2 Bagel with Cheddar or Swiss  
-        div.fs-4.border-bottom.border-dark.border-2 Bacon Breakfast
-        div.fs-4.border-bottom.border-dark.border-2 Sausage Breakfast
-        div.fs-4.border-bottom.border-dark.border-2 BELT (Bacon, Egg, Lettuce, Tomato)
-        div.fs-4.border-bottom.border-dark.border-2 BLT (Bacon, Lettuce, Tomato)
-        div.fs-4.border-bottom.border-dark.border-2 Nutella Bagel
-        div.fs-4.border-bottom.border-dark.border-2 Bagel with Peanut Butter or Jam       
-      div.col-md-6
-        img(src="/images/cream-cheese-with-smoked-salmon-bagel-sandwich.jpeg") 
+      div.col-lg-6.pe-lg-5.d-flex.flex-column.align-self-center.menu
+        div
+          span Strawberry Shortcake
+          span $4.35
+        div 
+          span Lemon Lavender
+          span $4.35
+        div 
+          span Double Chocolate Caramel
+          span $4.49
+        div 
+          span Cookies n' Cream
+          span $3.99
+        div 
+          span Red Velvet
+          span $5.99
+        div 
+          span Oreo Cheesecake
+          span $4.69
+        div 
+          span Boston Cream
+          span $4.99
+        div 
+          span Chocolate Peanut Butter
+          span $4.99
+      div.col-lg-6.mt-4.mt-lg-0
+        img.img(src="/images/donuts-display.jfif") 
+        <!-- photo by Shayna Douglas from https://unsplash.com/photos/l4ir-0Q8Y4c -->
+    h2.display-5.pt-5.mt-5.mt-lg-0 Bagels 
+    div.row.pt-4.pt-lg-5    
+      div.col-lg-6.order-2.order-lg-1.mt-4.mt-lg-0
+        img.img(src="/images/cream-cheese-with-smoked-salmon-bagel-sandwich.jpeg") 
         <!-- photo by Lucie Liz from https://www.pexels.com/photo/cream-cheese-with-smoked-salmon-bagel-sandwich-3957501/ -->
-    h2.pt-5 COFFEE
-    div.row.pt-4 
-      div.col-md-6
-        img(src="/images/latte.jfif") 
+      div.col-lg-6.ps-lg-5.order-1.order-lg-2.d-flex.flex-column.align-self-center.menu
+        div 
+          span Smoked Salmon with Cream Cheese
+          span $8.99
+        div 
+          span Open-face Swiss Bagel  
+          span $4.49
+        div 
+          span Bacon Breakfast
+          span $6.49
+        div 
+          span Sausage Breakfast
+          span $6.49
+        div 
+          span BELT (Bacon, Egg, Lettuce, Tomato)
+          span $6.49
+        div 
+          span BLT (Bacon, Lettuce, Tomato)
+          span $5.75
+        div 
+          span Nutella Bagel
+          span $3.99
+        div 
+          span Bagel with Peanut Butter or Jam
+          span $2.99 
+    h2.display-5.pt-5.mt-5.mt-lg-0 Coffee
+    div.row.pt-4
+      div.col-lg-6.pe-lg-5.d-flex.flex-column.align-self-center.menu
+        div 
+          span Expresso Macchiato
+          span $3.95
+        div 
+          span Americano
+          span $3.75
+        div 
+          span Vanilla Latte
+          span $5.25
+        div
+          span Rose Latte 
+          span $5.75
+        div 
+          span Cold Brew
+          span $4.25
+        div 
+          span Guinness Affogato
+          span $5.55
+        div 
+          span Cortado
+          span $3.95
+        div 
+          span Iced Flat White
+          span $4.55
+      div.col-lg-6.mt-4.mt-lg-0
+        img.img(src="/images/latte.jfif") 
         <!-- photo by Demi DeHerrera from https://unsplash.com/photos/L-sm1B4L1Ns -->
-      div.col-md-6.mt-4
-        div.fs-4.border-bottom.border-dark.border-2 Caramel Blended Ice
-        div.fs-4.border-bottom.border-dark.border-2 Expresso Macchiato
-        div.fs-4.border-bottom.border-dark.border-2 Americano
-        div.fs-4.border-bottom.border-dark.border-2 Vanilla Latte
-        div.fs-4.border-bottom.border-dark.border-2 Cold Brew
-        div.fs-4.border-bottom.border-dark.border-2 Guinness Affogato
-        div.fs-4.border-bottom.border-dark.border-2 Shakerato
-        div.fs-4.border-bottom.border-dark.border-2 Iced Flat White

@@ -1,18 +1,58 @@
 extends layout
 
 block layout-content
-  div.container-md
-    div.row.pt-5
-      div.col-md-6
-        img(src="/images/chocolate-glazed-donut-with-dried-cranberries.jfif") 
+  div.container-md.py-5
+    div.row
+      div.col-lg-6.img-container
+        img.img(src="/images/chocolate-glazed-donut-with-dried-cranberries.jfif") 
         <!-- photo by Tacyra Autrey from https://unsplash.com/photos/ny_FqNYqnP4 -->
-      div.col-md-6.mt-sm-4
-        h1.page-title Come on in for Donuts + Coffee and a good time. 
-    div.row.align-items-end.pt-5
-      div.col-md-6
-        h2.pb-sm-4 Bring your friends with you and try out different flavours.
-      div.col-md-6
-        img(src="/images/coffees-donuts.jfif") 
+        div.spinning-circle.yellow-circle.d-flex.flex-column.justify-content-center.align-items-center
+          div.text-center.fw-bolder MON-SUN
+          div.text-center.fw-bolder 11AM-7PM
+      div.col-lg-6.mt-5.mt-lg-0.ps-lg-5
+        h1.page-title.display-3 Come on in for Donuts + Coffee and a good time. 
+  div.my-4.marquee-section
+    div.marquee-div
+      div.h3.my-4.marquee &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull;
+  div.container-md.py-5
+    div.row.d-flex.align-items-center.pb-5.mb-5
+      div.col-lg-6.d-flex.justify-content-center.pe-lg-5
+        div.donut.border-dashed 
+          div.donut-hole.d-flex.flex-column.justify-content-center.align-items-center.border-dashed
+            h2.h3.text-center Bring along your friends and try out different flavours. &#128523; 
+      div.col-lg-6.mt-5.mt-lg-0
+        img.img(src="/images/coffees-donuts.jfif") 
         <!-- photo by Anthony Anthony from https://unsplash.com/photos/auPBqoRuy_I -->
+    p.marker.text-center.pt-5 "I will Come Back For More!"
+    p.marker.text-center.pb-5 Our Customers
+  div.container-md.py-5
+    div.row.align-items-end
+      div.col-lg-6.img-container
+        img.img(src="/images/home-made-bagels.avif") 
+        <!-- photo by May Lawrence from https://unsplash.com/photos/2mAZGvlgWlI -->
+        div.spinning-circle.green-circle.d-flex.flex-column.justify-content-center.align-items-center
+          div.text-center.fw-bolder #DONUTS
+          div.text-center.fw-bolder #BAGELS
+          div.text-center.fw-bolder #COFFEE
+      div.col-lg-6.ps-lg-5
+        h2.display-6.pb-3.pt-5 Did we mention we also make tasty bagels?
+        p.fs-5 We have recently ventured into the world of bagels. We prides ourselves in our innovative menu as we here at Humphrey's Donuts are always looking to customize, improve and add new flavors to our menu. 
+        p.fs-5 We also highly value our customers' wants so if there's anything you want to try, just let us know. We are always happy to give it a try!
+  div.my-4.marquee-section-reverse
+    div.marquee-div
+      div.h3.my-4.marquee &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull; DONUTS &bull; BAGELS &bull; COFFEE &bull;
+  div.container-md.py-5
+    div.row
+      div.col-lg-6.d-flex.flex-column.justify-content-between
+        div.h-100.d-flex.justify-content-center.align-items-center.py-5.py-lg-0.border-dashed.border-radius-rounded
+          h2.display-5 Check Us Out 
+        div.mb-5.mb-lg-0
+          a(href="/menu")
+            button.form-btn.border.border-2.border-dark.py-4.mt-4 View Menu
+          a(href="/order")
+            button.form-btn.border.border-2.border-dark.py-4.mt-4 Order Now
+      div.col-lg-6.img-container
+        img.img(src="/images/donuts.avif") 
+        <!-- photo by Rod Long from https://unsplash.com/photos/6SMF42-JTAc -->
      
     

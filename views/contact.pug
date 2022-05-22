@@ -1,0 +1,29 @@
+extends layout
+
+block layout-content
+  div.container-md
+    div.row.align-items-center.py-5
+      div.col-lg-6.mb-5.mb-lg-0
+        div.map-container.border.border-2.border-dark
+      div.col-lg-6.text-center
+        h1.page-title.display-3.mb-4 Stop By! 
+        p.fs-5 140 Bremner Boulevard, Toronto, ON  
+        p.fs-5 (416) 416-4164
+        p.fs-5.fw-bold enquiry@humphreysdonut.ca
+    p.marker.text-center.pt-5 Don't just look at the pics.
+    p.marker.text-center.pb-5 Come and see for yourself!
+    div.py-5
+      h2.display-4.mb-5.text-center.text-lg-start Drop us a line
+      div.row
+        div.col-lg-7.col-xl-8.pe-lg-5.mb-5.mb-lg-0
+          form.d-flex.flex-column(action="") 
+            input.mb-4.p-4.border-dashed(type="text" placeholder="Your Name") 
+            input.mb-4.p-4.border-dashed(type="text" placeholder="Email Address")
+            input.mb-4.p-4.border-dashed(type="text" placeholder="Contact Number")
+            textarea.mb-4.p-4.border-dashed(placeholder="Feel Free to Leave Your Enquiry.")
+            button.form-btn.border.border-2.border-dark.py-4.text-uppercase Submit
+        div.col-lg-5.col-xl-4
+          div.d-flex.justify-content-center
+            img.img.vertical-img(src="images/donuts-vertical.jfif")
+            <!-- photo by Shayna Douglas from https://unsplash.com/photos/RjMBPxkQMVM -->
+  

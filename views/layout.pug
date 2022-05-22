@@ -3,25 +3,52 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width")
+    meta(name="viewport" content="width=device-width, maximum-scale=1.0")
     title Humphrey's Doughnuts | #{title}
     link(rel="stylesheet", type="text/css", href="/css/styles.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css")
+    link(rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png")
+    link(rel="manifest" href="/images/site.webmanifest")
+    //-Favicon is from the open source project Twemoji licensed under CC-BY 4.0. https://favicon.io/emoji-favicons/doughnut/
     link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous")
   body
-    nav.navbar.navbar-expand-md.navbar-light.pt-3
-      div.container-md
-        a.navbar-brand(href="/") Humphrey's Doughnuts
-        button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation") 
-          span.navbar-toggler-icon
-        div.collapse.navbar-collapse(id="navbarSupportedContent") 
-          div.navbar-nav.ms-auto
-            a.nav-item.nav-link.fs-3(href="/") Home
-            a.nav-item.nav-link.fs-3(href="/menu") Menu
-            a.nav-item.nav-link.fs-3(href="/about") About
+    div 
+      div.container-md.py-3.text-center
+        a.text-reset.text-decoration-none(href="/")
+          img.d-none.d-sm-inline-block.align-top.me-2.logo(src="/images/apple-touch-icon.png" alt="Logo")
+          span.d-inline.brand Humphrey's Doughnuts
+    nav 
+      div.container-md.pt-2.pb-3
+        div.row 
+          div.col-6.col-lg-3.nav-btn
+            a.nav-item.nav-link.text-center.py-3.my-3.text-reset.text-uppercase.border.border-2.border-dark(href="/menu") Menu
+          div.col-6.col-lg-3.nav-btn
+            a.nav-item.nav-link.text-center.py-3.my-3.text-reset.text-uppercase.border.border-2.border-dark(href="/about") About
+          div.col-6.col-lg-3.nav-btn
+            a.nav-item.nav-link.text-center.py-3.my-3.text-reset.text-uppercase.border.border-2.border-dark(href="/contact") Contact
+          div.col-6.col-lg-3.nav-btn
+            a.nav-item.nav-link.text-center.py-3.my-3.text-reset.text-uppercase.border.border-2.border-dark(href="/order") Order
+
     main.pb-5
       block layout-content
-    footer.navbar.bg-dark.justify-content-center
-      div.text-white.bg-dark By Aaron Chan, 2022.
+    
+    footer.navbar.d-flex.flex-column.bg-dark.py-5
+      div.bg-dark.text-center
+        a.bg-dark(href="https://www.instagram.com/" target="_blank")
+          i.fab.fa-instagram.h2.mx-3.mx-sm-4.bg-dark
+        a.bg-dark(href="https://www.facebook.com/" target="_blank")
+          i.fab.fa-facebook.h2.mx-3.mx-sm-4.bg-dark
+        a.bg-dark(href="https://www.yelp.com/" target="_blank")
+          i.fab.fa-yelp.h2.mx-3.mx-sm-4.bg-dark
+        a.bg-dark(href="https://www.tripadvisor.com/" target="_blank")
+          i.fab.fa-tripadvisor.h2.mx-3.mx-sm-4.bg-dark
+      div.bg-dark.text-white.text-center.pt-3 140 Bremner Boulevard, Toronto
+      div.bg-dark.text-white.pt-3 (416) 416-4164
+      div.d-flex.justify-content-center.align-items-center.h1.scroll &uarr;
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous")    
     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous")
-    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous")    
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous") 
+    script(src="js/app.js")
+    script(async src=`https://maps.googleapis.com/maps/api/js?key=AIzaSyA8HahyLGxd1U4gwb34eZDBCk--S9NC-bI&callback=initMap`)   
