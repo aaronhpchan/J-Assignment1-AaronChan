@@ -299,7 +299,7 @@ textarea {
 }
 
 .modal-content, .modal-content * {
-    background-color: #fffafa;
+    background-color: #fff;
 }
   
 .close {
@@ -345,6 +345,7 @@ textarea {
     }
     .menu > div {
         line-height: 1.9;
+        border-bottom: 1.75px dashed;
     }
 }
 
@@ -357,6 +358,7 @@ textarea {
 @media screen and (max-width: 576px) {
     .marker {
         font-size: 250%;
+        text-shadow: 4.25px 4px #fffafa;
     }
     .nav-item {
         font-size: 115%;
