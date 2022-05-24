@@ -343,6 +343,9 @@ textarea {
     .about-p {
         font-size: 75%;
     }
+    .menu > div {
+        line-height: 1.9;
+    }
 }
 
 @media screen and (min-width: 480px) {
