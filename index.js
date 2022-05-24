@@ -31,7 +31,7 @@ app.get("/order", (req, res) => {
 
 //set up server listening
 app.listen(port, () => {
-    console.log(`listening on http://localhost:${port}`);
+    console.log(`listening on port ${port}`);
 });
 
 
