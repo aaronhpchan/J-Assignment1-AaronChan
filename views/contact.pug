@@ -16,12 +16,12 @@ block layout-content
       h2.display-4.mb-5.text-center.text-lg-start Drop us a line
       div.row
         div.col-lg-7.col-xl-8.pe-lg-5.mb-5.mb-lg-0
-          form.d-flex.flex-column(action="") 
+          form.d-flex.flex-column(action="" onsubmit="event.preventDefault()") 
             input.mb-4.p-4.border-dashed(type="text" placeholder="Your Name") 
             input.mb-4.p-4.border-dashed(type="text" placeholder="Email Address")
             input.mb-4.p-4.border-dashed(type="text" placeholder="Contact Number")
             textarea.mb-4.p-4.border-dashed(placeholder="Feel Free to Leave Your Enquiry.")
-            button.form-btn.border.border-2.border-dark.py-4.text-uppercase Submit
+            button.border.border-2.border-dark.py-4.text-uppercase.form-btn#form-btn Submit
         div.col-lg-5.col-xl-4
           div.d-flex.justify-content-center
             img.img.vertical-img(src="images/donuts-vertical.jfif" alt="Three Donuts Stacked Together")
