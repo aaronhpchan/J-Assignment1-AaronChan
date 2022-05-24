@@ -30,9 +30,6 @@ html, body{
     text-shadow: 1.75px 2.125px #fffafa;
 }
 
-.brand::selection, .brand-small::selection {
-    text-shadow: none;
-}
 
 .brand, .brand-small, .page-title, h2, .marquee {
     font-family: 'Dela Gothic One', sans-serif;
@@ -44,6 +41,9 @@ html, body{
     text-shadow: 5.5px 5px #fffafa;
 } 
 
+.brand::selection, .brand-small::selection, .marker::selection {
+    text-shadow: none;
+}
 .nav-item {
     font-weight: 600;
     font-size: 150%;
@@ -100,7 +100,7 @@ html, body{
     top: 10%;
 }
 
-.yellow-circle, .yellow-circle * {
+.yellow-circle, .yellow-circle *, .confirm-msg {
     background-color: #faf0b2;
 }
 
@@ -219,6 +219,11 @@ html, body{
     background-color: transparent;
 } 
 
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
 .form-btn {
     font-size: 110%;
     font-weight: 600;
@@ -230,11 +235,11 @@ html, body{
     box-shadow: 0 3.5px #3b3c36;
 }
 
-input, textarea, .form-btn {
+input, textarea, .form-btn, .confirm-msg {
     width: 100%;
 }
 
-input, textarea, .form-btn, .nav-item, .card-light {
+input, textarea, .form-btn, .nav-item, .card-light, .confirm-msg {
     border-radius: 15px;
 }
 
@@ -245,6 +250,10 @@ form, textarea, .vertical-img {
 
 textarea {
     resize: none !important;
+}
+
+.confirm-msg {
+    display: none;
 }
 
 .fa-shopping-cart, .cart-qty {

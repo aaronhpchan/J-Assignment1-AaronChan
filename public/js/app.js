@@ -28,60 +28,17 @@ function initMap() {
     });
 }
 
-/* Modal and Shopping Cart functionalities */
-const modal = document.querySelector(".modal");
-const modalTriggers = document.querySelectorAll(".card-light");
-const closeBtn = document.querySelector(".close");
-const heading = document.querySelector(".modal-heading");
-const desc = document.querySelector(".modal-desc");
-const price = document.querySelector(".modal-price");
-const plus = document.querySelector(".fa-plus-circle");
-const minus = document.querySelector(".fa-minus-circle");
-const quantity = document.querySelector(".quantity");
-const addCart = document.querySelector(".add-cart");
-const cartQty = document.querySelector(".cart-qty");
+/* Form submit */
+const contactForm = document.querySelector("#form");
+const submitBtn = document.querySelector("#form-btn");
+const confirmMsg = document.querySelector(".confirm-msg");
 
-for (let modalTrigger of modalTriggers) {
-    modalTrigger.onclick = () => {
-        modal.style.display = "block";
-        heading.innerHTML = modalTrigger.childNodes[0].innerHTML;
-        desc.innerHTML = modalTrigger.childNodes[1].innerHTML;
-        price.innerHTML = modalTrigger.childNodes[2].innerHTML;
-        quantity.innerHTML = 1;
-        addCart.innerHTML = "Add to Cart";
-        changeQty();
-    }    
-}
-
-closeBtn.onclick = () => {
-    modal.style.display = "none";
-}
-  
-window.onclick = (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-}
-
-addCart.onclick = () => {
-    addCart.innerHTML = "Adding to Cart...";    
+contactForm.onsubmit = (event) => {
+    event.preventDefault();
+    submitBtn.innerHTML = "Processing...";
     setTimeout(() => { 
-        cartQty.innerHTML = parseInt(cartQty.innerHTML) + parseInt(quantity.innerHTML);
-        modal.style.display = "none"; 
+        contactForm.style.display = "none";
+        confirmMsg.style.display = "block";
     }, 750);
 }
 
-function changeQty() {
-    const priceUnformatted = price.innerHTML.substring(1);
-    
-    plus.onclick = () => {
-        quantity.innerHTML = parseInt(quantity.innerHTML) + 1;
-        price.innerHTML = `$${(Math.round((priceUnformatted * parseInt(quantity.innerHTML) + Number.EPSILON) * 100) / 100).toFixed(2)}`;
-    }
-    minus.onclick = () => {
-        if (parseInt(quantity.innerHTML) > 1) {
-            quantity.innerHTML = parseInt(quantity.innerHTML) - 1;
-            price.innerHTML = `$${(Math.round((priceUnformatted * parseInt(quantity.innerHTML) + Number.EPSILON) * 100) / 100).toFixed(2)}`;
-        }
-    }
-}
